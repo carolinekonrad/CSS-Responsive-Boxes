@@ -1,3 +1,52 @@
+* {
+  border: 1px solid teal;
+}
+
 body {
-  background: blanchedalmond;
+  background: white;
+  margin: 10px;
+  font-family: sans-serif;
+  text-align: center;
+  color: blue;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.a, .c{
+  flex-grow: 2;
+  padding: 5px;
+  margin: 10px;
+}
+
+.b {
+  min-height: 60vh;
+  flex-grow: 5;
+  padding: 5px;
+  margin: 10px;
+  background-color: aquamarine;
+}
+
+.a {
+  background-color: plum;
+}
+
+.c {
+  background-color: lightcoral;
+}
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .b {
+    max-width: 60%;
+  }
+  .a {
+    width: 100%;
+  }
 }
