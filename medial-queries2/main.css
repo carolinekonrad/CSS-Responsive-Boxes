@@ -1,3 +1,85 @@
 body {
   background: papayawhip;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: blue;
+}
+
+* {
+  border: 2px solid black;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-grow: 3;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70vh;
+}
+
+header, footer, aside, .bottom  {
+  flex-grow: 1;
+  margin: 5px;
+  max-height: 10vh;
+}
+
+aside  {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 20vh;
+  background-color: lightseagreen;
+}
+
+aside > div {
+  flex-grow: 10;
+  margin: 5px;
+}
+
+main {
+  width: 100%;
+  flex-grow: 3;
+  margin: 5px;
+  background-color: aqua;
+}
+
+header {
+  background-color: lightgoldenrodyellow;
+}
+footer {
+  background-color: lightpink;
+}
+.bottom {
+  border: none;
+}
+
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  header {
+    width: 100%;
+    max-height: 10vh;
+  }
+  .bottom {
+    justify-content: stretch;
+    flex-basis: 70%;
+      min-height:  80vh;
+  }
+  footer {
+    margin: .5em;
+    flex-grow: 3;
+    min-height:  80vh;
+  }
 }
